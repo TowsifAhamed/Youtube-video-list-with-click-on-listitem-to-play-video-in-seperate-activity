@@ -1,36 +1,18 @@
 package com.example.youtubevideolist;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.squareup.picasso.Picasso;
-
-import org.apache.commons.io.IOUtils;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     ListView listView;
@@ -83,10 +65,6 @@ public class MainActivity extends AppCompatActivity {
             View view=getLayoutInflater().inflate(R.layout.customlist, null);
             ImageView imageView = view.findViewById(R.id.imagelist);
             TextView textView = view.findViewById(R.id.titlelist);
-            //imageView.setImageResource();
-            //for(int i=0; i<length; i++){
-                //ListviewImagesUrl[0]=thumbnailurl1+vdourlkey[0]+thumbnailurl2;
-            //}
             Picasso.get().load(thumbnailurl1+vdourlkey[position]+thumbnailurl2).into(imageView);
             textView.setText(ListviewTitle[position]);
             return view;
