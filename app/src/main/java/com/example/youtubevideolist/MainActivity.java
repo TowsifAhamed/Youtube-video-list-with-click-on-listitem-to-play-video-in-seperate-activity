@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 //ListviewImagesUrl[0]=thumbnailurl1+vdourlkey[0]+thumbnailurl2;
             //}
             Picasso.get().load(thumbnailurl1+vdourlkey[position]+thumbnailurl2).into(imageView);
-            textView.setText(thumbnailurl1+vdourlkey[position]+thumbnailurl2);
+            textView.setText(ListviewTitle[position]);
             return view;
         }
     }
